@@ -1,0 +1,16 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+    <form method="post"> {% csrf_token %}
+
+       <p>¿Estas seguro de eliminar la silla gamer?</p>
+
+       <button type="submit">Confirmar</button>
+       <button><a href="{% url 'Inicio' %}">Cancelar</a></button>
+
+    </form>
+    
+{% endblock contenidoQueCambia %}
+    

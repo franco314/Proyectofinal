@@ -1,0 +1,34 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<ul>
+
+    
+    {% for silla in sillas %}
+
+    <li>
+        
+        <a href="{% url 'detalleSillasGamer' silla.id  %}">{{silla}}</a>
+        
+        
+
+    
+    </li>
+    <div>
+        
+        <button>
+            <a href="{% url 'eliminaSillasGamer' silla.id  %}">Eliminar</a>
+        </button>
+        <button>
+            <a href="{% url 'actualizaSillasGamer' silla.id  %}">Editar</a>
+        </button>
+    </div>
+        
+    {% endfor %}
+        
+</ul>
+<a href="{% url 'creaSillasGamer' %}">Crear silla gamer</a>
+    
+{% endblock contenidoQueCambia %}

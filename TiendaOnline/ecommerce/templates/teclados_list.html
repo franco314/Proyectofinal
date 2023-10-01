@@ -1,0 +1,34 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<ul>
+
+    
+    {% for teclado in teclados %}
+
+    <li>
+        
+        <a href="{% url 'detalleTeclados' teclado.id  %}">{{teclado}}</a>
+        
+        
+
+    
+    </li>
+    <div>
+        
+        <button>
+            <a href="{% url 'eliminaTeclados' teclado.id  %}">Eliminar</a>
+        </button>
+        <button>
+            <a href="{% url 'actualizaTeclados' teclado.id  %}">Editar</a>
+        </button>
+    </div>
+        
+    {% endfor %}
+        
+</ul>
+<a href="{% url 'creaTeclados' %}">Crear Teclado</a>
+    
+{% endblock contenidoQueCambia %}

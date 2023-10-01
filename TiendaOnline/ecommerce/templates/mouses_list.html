@@ -1,0 +1,34 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<ul>
+
+    
+    {% for mouse in mouses %}
+
+    <li>
+        
+        <a href="{% url 'detalleMouses' mouse.id %}">{{mouse}}</a>
+        
+        
+
+    
+    </li>
+    <div>
+        
+        <button>
+            <a href="{% url 'eliminaMouses' mouse.id %}">Eliminar</a>
+        </button>
+        <button>
+            <a href="{% url 'actualizaMouses' mouse.id %}">Editar</a>
+        </button>
+    </div>
+        
+    {% endfor %}
+        
+</ul>
+<a href="{% url 'creaMouses' %}">Crear Mouse</a>
+    
+{% endblock contenidoQueCambia %}

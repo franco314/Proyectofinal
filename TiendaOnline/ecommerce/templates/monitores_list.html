@@ -1,0 +1,34 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<ul>
+
+    
+    {% for monitor in monitores %}
+
+    <li>
+        
+        <a href="{% url 'detalleMonitores' monitor.id %}">{{monitor}}</a>
+        
+        
+
+    
+    </li>
+    <div>
+        
+        <button>
+            <a href="{% url 'eliminaMonitores' monitor.id %}">Eliminar</a>
+        </button>
+        <button>
+            <a href="{% url 'actualizaMonitores' monitor.id %}">Editar</a>
+        </button>
+    </div>
+        
+    {% endfor %}
+        
+</ul>
+<a href="{% url 'creaMonitores' %}">Crear Monitor</a>
+    
+{% endblock contenidoQueCambia %}

@@ -1,0 +1,26 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<ul>
+
+    
+    {% for silla in sillas %}
+
+    <li>{{silla}}</li>
+    <div>
+        <form action="{% url 'eliminaSillas' silla.id %}" method="post"> {% csrf_token %}
+            <button type="submit">Eliminar</button>
+        </form>
+        <button>
+            <a href="{% url 'editaSillas' silla.id %}">Editar</a>
+        </button>
+    </div>
+        
+    {% endfor %}
+        
+</ul>
+<a href="{% url 'sillasGamerFormulario' %}">Crear sillas</a>
+    
+{% endblock contenidoQueCambia %}

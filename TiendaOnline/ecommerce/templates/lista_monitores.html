@@ -1,0 +1,26 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<ul>
+
+    
+    {% for monitor in monitores %}
+
+    <li>{{monitor}}</li>
+    <div>
+        <form action="{% url 'eliminaMonitor' monitor.id %}" method="post"> {% csrf_token %}
+            <button type="submit">Eliminar</button>
+        </form>
+        <button>
+            <a href="{% url 'editarMonitor' monitor.id %}">Editar</a>
+        </button>
+    </div>
+        
+    {% endfor %}
+        
+</ul>
+<a href="{% url 'monitoresFormulario' %}">Crear Monitor</a>
+    
+{% endblock contenidoQueCambia %}

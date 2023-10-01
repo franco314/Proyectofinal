@@ -1,0 +1,26 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<ul>
+
+    
+    {% for teclado in teclados %}
+
+    <li>{{teclado}}</li>
+    <div>
+        <form action="{% url 'eliminaTeclado' teclado.id %}" method="post"> {% csrf_token %}
+            <button type="submit">Eliminar</button>
+        </form>
+        <button>
+            <a href="{% url 'editaTeclado' teclado.id %}">Editar</a>
+        </button>
+    </div>
+        
+    {% endfor %}
+        
+</ul>
+<a href="{% url 'tecladoFormulario' %}">Crear Auriculares</a>
+    
+{% endblock contenidoQueCambia %}

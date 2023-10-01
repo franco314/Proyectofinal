@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mouses - Tu Tienda Online</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        {% load static %}
+    </head>
+    <body>
+        <!-- Navigation-->
+        {% include 'navbar.html' %}
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">¡Bienvenido a Tu Tienda!</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">No olvides iniciar sesión para comenzar tu pedido.</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <h2 class="text-center mb-5">Elegí tu mouse favorito</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="data:image/jpeg;base64,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" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Mouse Logitech g203 lightsync gaming mouse blue</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$30.000</span>
+                                    $$ 22.749,00 c/u
+                                    
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                            <div class="card h-100">
+                                <!-- Product image-->
+                                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqT0bGwuumhARzOUk3ZlFmlCXPZLQZmJciuOJDgFovz82p7Ln-azzUbOM5lhguwOiLFk4&usqp=CAU" alt="..." />
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">Mouse Razer viper v2 pro wireless white 3944</h5>
+                                        <!-- Product price-->
+                                        
+                                        $ 120.000 c/u
+                                        
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <!-- Product image-->
+                                <img class="card-img-top" src="data:image/jpeg;base64,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" alt="..." />
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">Mouse gaming Marvo m207 3200 dpi optico led rgb</h5>
+                                        <!-- Product price-->
+                                        $ 4.500 c/u
+                                        
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
+                                </div>
+                            </div>
+                        </div>
+                                           
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

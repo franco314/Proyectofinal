@@ -1,0 +1,34 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<ul>
+
+    
+    {% for auricular in auriculares %}
+
+    <li>
+        
+        <a href="{% url 'detalleAuriculares' auricular.id %}">{{auricular}}</a>
+        
+        
+
+    
+    </li>
+    <div>
+        
+        <button>
+            <a href="{% url 'eliminarAuriculares' auricular.id %}">Eliminar</a>
+        </button>
+        <button>
+            <a href="{% url 'actualizaAuriculares' auricular.id %}">Editar</a>
+        </button>
+    </div>
+        
+    {% endfor %}
+        
+</ul>
+<a href="{% url 'creaAuriculares' %}">Crear Auricular</a>
+    
+{% endblock contenidoQueCambia %}

@@ -1,0 +1,15 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<form action="{% url 'editarMouse' id %}" method="post"> {% csrf_token %}
+
+{{miFormulario.as_ul}}
+
+<button type="submit">Actualizar</button>
+
+</form>
+    
+{% endblock contenidoQueCambia %}
+    

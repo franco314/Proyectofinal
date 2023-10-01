@@ -1,0 +1,15 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<form action="{% url 'creaMouses' %}" method="post"> {% csrf_token %}
+
+{{form.as_p}}
+
+<button type="submit">Enviar</button>
+
+</form>
+    
+{% endblock contenidoQueCambia %}
+    
